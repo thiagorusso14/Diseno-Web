@@ -1,49 +1,76 @@
+@font-face {
+    font-family: 'Geometric Slab Serif 712';
+    src: url('GeometricSlabserif712-Medium.woff') format('woff');
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Geometric Slab Serif 712', Arial, sans-serif;
 }
 
 body {
-    background-color: #f3f3f3;
+    background-color: #fafafa;
     color: #333;
     display: flex;
-    justify-content: center;
-    padding: 20px;
+    flex-direction: column; /* Estructura con flexbox */
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
 }
-
 
 .container {
     max-width: 800px;
     width: 100%;
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    margin: 20px auto; /* Centra la caja con márgenes automáticos */
 }
-
 
 .header {
     background-color: #5c2a3e;
     color: #ffffff;
-    padding: 25px;
+    padding: 20px;
     text-align: center;
-    border-bottom: 3px solid #8b465f;
 }
 
 .header h1 {
     font-size: 28px;
-    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .header p {
     font-size: 16px;
     color: #e0e0e0;
-    margin-top: 5px;
 }
 
+nav {
+    background-color: #000000;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #5c2a3e;
+}
 
 .event-details {
     padding: 25px;
@@ -58,7 +85,8 @@ body {
     padding-bottom: 5px;
 }
 
-.event-details p, .event-details ul {
+.event-details p,
+.event-details ul {
     margin-bottom: 20px;
     line-height: 1.7;
     color: #555;
@@ -73,25 +101,38 @@ body {
     margin-bottom: 10px;
 }
 
+.event-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-.event-details .cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #ffffff;
+footer {
     background-color: #5c2a3e;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
+    color: #ffffff;
     text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* Asegura que el footer esté al final */
+}
+
+footer .social-links {
     margin-top: 10px;
-    transition: background-color 0.3s ease;
 }
 
-.event-details .cta-button:hover {
-    background-color: #8b465f;
+footer .social-links a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 10px;
+    font-weight: bold;
 }
 
+footer .social-links a:hover {
+    color: #d9a5b3;
+}
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .header h1 {
         font-size: 24px;
